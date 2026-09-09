@@ -16,7 +16,7 @@ export function Header() {
           <a href="#about">About</a>
           <a
             className="nav-github"
-            href="https://github.com/yvonnejinn"
+            href="https://github.com/jiny16pg/Data-Toolkit"
             target="_blank"
             rel="noopener noreferrer"
           >

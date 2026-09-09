@@ -11,7 +11,7 @@ export function Footer() {
           <span>Yvonne&apos;s Toolkit</span>
         </a>
         <p>Built with React + Vite</p>
-        <a href="https://github.com/yvonnejinn" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/jiny16pg/Data-Toolkit" target="_blank" rel="noopener noreferrer">
           <Github size={14} aria-hidden="true" />
           GitHub
           <ArrowUpRight size={13} aria-hidden="true" />

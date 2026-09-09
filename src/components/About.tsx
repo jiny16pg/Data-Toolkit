@@ -16,7 +16,7 @@ export function About() {
         </p>
         <a
           className="text-link"
-          href="https://github.com/yvonnejinn"
+          href="https://github.com/jiny16pg/Data-Toolkit"
           target="_blank"
           rel="noopener noreferrer"
         >
