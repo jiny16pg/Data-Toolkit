@@ -1,4 +1,4 @@
-import { Github, Sparkles } from 'lucide-react'
+import { Github, LayoutGrid } from 'lucide-react'
 
 export function Header() {
   return (
@@ -6,7 +6,7 @@ export function Header() {
       <div className="header-inner">
         <a className="brand" href="#top" aria-label="Yvonne's Toolkit home">
           <span className="brand-mark" aria-hidden="true">
-            <Sparkles size={16} strokeWidth={2.4} />
+            <LayoutGrid size={16} strokeWidth={2.1} />
           </span>
           <span>Yvonne&apos;s Toolkit</span>
         </a>

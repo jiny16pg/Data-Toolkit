@@ -41,6 +41,7 @@ function Action({ label, url, primary }: { label: string; url: string; primary?:
 
 export function ProjectCard({ project }: { project: Project }) {
   const Icon = iconMap[project.icon]
+  const hasDistinctSecondaryAction = Boolean(project.secondaryUrl && project.secondaryUrl !== project.primaryUrl)
 
   return (
     <article className={`project-card ${project.featured ? 'is-featured' : ''}`} data-accent={project.accent}>
@@ -48,15 +49,10 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="project-icon" aria-hidden="true">
           <Icon size={21} strokeWidth={1.8} />
         </div>
-        <span className="status-badge">
-          <span className="status-dot" aria-hidden="true" />
-          {project.status}
-        </span>
       </div>
       <div className="project-card-content">
         <p className="project-category">{project.category}</p>
         <h3>{project.name}</h3>
-        {project.subtitle && <p className="project-subtitle">{project.subtitle}</p>}
         <p className="project-description">{project.description}</p>
         <div className="tag-list" aria-label={`${project.name} tags`}>
           {project.tags.map((tag) => (
@@ -68,7 +64,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="project-actions">
         <Action label={project.primaryAction} url={project.primaryUrl} primary />
-        <Action label={project.secondaryAction} url={project.secondaryUrl} />
+        {hasDistinctSecondaryAction && <Action label={project.secondaryAction} url={project.secondaryUrl} />}
       </div>
     </article>
   )

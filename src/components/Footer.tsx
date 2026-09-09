@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Github, LayoutGrid } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -6,7 +6,7 @@ export function Footer() {
       <div className="footer-inner">
         <a className="footer-brand" href="#top">
           <span className="brand-mark" aria-hidden="true">
-            <Sparkles size={14} strokeWidth={2.4} />
+            <LayoutGrid size={14} strokeWidth={2.1} />
           </span>
           <span>Yvonne&apos;s Toolkit</span>
         </a>

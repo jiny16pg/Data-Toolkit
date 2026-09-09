@@ -16,15 +16,11 @@ function App() {
         <Hero />
         <ProjectSection
           id="projects"
-          eyebrow="01 / Selected work"
           title="AI Products"
-          description="Practical interfaces and reusable workflows for turning messy inputs into useful decisions."
           projects={aiProducts}
         />
         <ProjectSection
-          eyebrow="02 / Technical projects"
           title="Data & Intelligence"
-          description="Explorations across machine learning, retrieval and the systems that help information travel further."
           projects={dataProjects}
         />
         <About />

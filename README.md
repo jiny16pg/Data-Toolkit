@@ -82,15 +82,15 @@ The main file to edit is `src/data/projects.ts`. Add one `Project` object with i
 
 If a new icon is needed, add its project icon value to `src/types/project.ts` and register the matching Lucide icon in the `iconMap` inside `src/components/ProjectCard.tsx`.
 
-For a published demo or documentation page, put its public URL in `src/data/projects.ts`. The interface will open it in a new tab. For an unpublished page, leave the URL empty: the interface will show `Coming Soon` and will not create an invalid `href="#"` link. Add a nearby TODO describing the public URL that still needs to be supplied.
+For a published demo or documentation page, put its public URL in `src/data/projects.ts`. The interface will open it in a new tab. For an unpublished page, leave the URL empty: the interface will show `Coming Soon` and will not create an invalid `href="#"` link.
 
 ## Project Links
 
-- **Competitor Intelligence:** public demo and project links are placeholders until personal URLs are supplied.
-- **BatchLens:** public demo and project links are placeholders until personal URLs are supplied.
-- **Job Application Copilot:** public skill and documentation links are placeholders until personal URLs are supplied.
+- **Competitor Intelligence:** [Fieldnote / Competitive intelligence](https://jiny16pg.github.io/competitor-intelligence-demo/)
+- **BatchLens:** [Data Extraction Pipeline demo](https://jiny16pg.github.io/data-extraction-pipeline-demo/)
+- **Job Application Copilot:** [GitHub repository](https://github.com/yvonnejinn/job-application-copilot)
 - **Loan Approval Prediction:** [GitHub repository](https://github.com/yvonnejinn/Loan-Approval-Prediction)
-- **News Intelligence RAG:** [GitHub repository](https://github.com/yvonnejinn/news-intelligence-rag-agent), pending URL verification.
+- **News Intelligence RAG:** [GitHub repository](https://github.com/yvonnejinn/news-intelligence-rag-agent)
 
 ## Before Making This Repository Public
 

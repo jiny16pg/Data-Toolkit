@@ -3,10 +3,6 @@ import { ArrowUpRight, Github } from 'lucide-react'
 export function About() {
   return (
     <section className="about-section page-section" id="about" aria-labelledby="about-heading">
-      <div className="about-label">
-        <p className="eyebrow">03 / The toolkit</p>
-        <span className="about-line" aria-hidden="true" />
-      </div>
       <div className="about-copy">
         <h2 id="about-heading">A working shelf for curious problems.</h2>
         <p>

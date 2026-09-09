@@ -10,7 +10,6 @@ export type ProjectIcon =
 export interface Project {
   id: string
   name: string
-  subtitle?: string
   group: ProjectGroup
   category: string
   description: string
@@ -20,7 +19,6 @@ export interface Project {
   primaryUrl: string
   secondaryAction: string
   secondaryUrl: string
-  status: string
   featured: boolean
-  accent: 'indigo' | 'cyan' | 'emerald' | 'gold'
+  accent: 'neutral' | 'orange'
 }
