@@ -1,10 +1,10 @@
 # Yifan's Data Toolkit
 
-Personal portfolio and project launcher for selected AI, data science and applied AI projects.
+A lightweight personal project launcher for selected data science, applied AI, document intelligence and workflow projects.
 
-This repository is a lightweight navigation layer. It does not contain the source code, datasets, credentials or services for the projects it presents. It provides project summaries and links to public demos, repositories and documentation entry points.
+Live site: `https://jiny16pg.github.io/Data-Toolkit/`
 
-## Projects
+## Current projects
 
 - Competitor Intelligence
 - BatchLens
@@ -12,91 +12,49 @@ This repository is a lightweight navigation layer. It does not contain the sourc
 - Loan Approval Prediction
 - News Intelligence RAG
 
-The homepage uses a compact launcher grid so every project is visible at a glance. Hover or focus a tile to reveal its description and technology stack; clicking the tile opens the public demo or repository.
+The homepage uses a compact launcher grid so every project is visible at a glance. On desktop, hovering or focusing a project opens a larger floating detail surface with the full project description and technology stack. On touch devices, the `+` control expands the full description inside the tile. Clicking a project opens its public demo or repository.
+
+The interface also includes an English / Chinese language toggle. Project names and technical terms remain in their canonical form while supporting copy is localized for clarity.
 
 ## Local Development
 
-Prerequisites: Node.js 20 or newer and npm.
-
 ```bash
-git clone https://github.com/jiny16pg/Data-Toolkit.git
-cd Data-Toolkit
 npm install
 npm run dev
 ```
 
-The Vite development server will print a local URL in the terminal.
-
-## Build
+Production build:
 
 ```bash
 npm run build
 ```
 
-The production output is written to `dist/`.
+## Deployment
 
-## GitHub Pages
+GitHub Pages deployment is handled by `.github/workflows/deploy.yml`. The Vite base path remains configured for `/Data-Toolkit/`.
 
-The Vite base path is configured for this repository in `vite.config.ts`:
+## Project data
 
-```text
-https://jiny16pg.github.io/Data-Toolkit/
-```
+The main file to edit is `src/data/projects.ts`. Each `Project` contains:
 
-To publish:
+- a stable project id and display name;
+- a project kind (`Product`, `Skill`, `Model`, or `RAG`);
+- English and Chinese short descriptions;
+- English and Chinese full descriptions;
+- a technology stack;
+- English and Chinese action labels;
+- a public demo or repository URL.
 
-1. Use the GitHub repository `jiny16pg/Data-Toolkit`.
-2. Push this project to the `main` branch.
-3. Open the repository on GitHub and go to **Settings -> Pages**.
-4. Set the source to **GitHub Actions**.
-5. Pushes to `main` will build and deploy through `.github/workflows/deploy.yml`.
+`src/components/ProjectLogo.tsx` contains the custom SVG marks used by the launcher tiles. Shared interface copy and project-kind labels live in `src/i18n.ts`.
 
-The workflow uses the current Pages artifact and deployment actions. It does not maintain a separate `gh-pages` branch. The build runs on GitHub's runner, so the computer used to edit this project does not need Node.js installed for deployment.
+## Public links
 
-## Development Across Multiple Computers
+- **Competitor Intelligence:** https://jiny16pg.github.io/competitor-intelligence-demo/
+- **BatchLens:** https://jiny16pg.github.io/data-extraction-pipeline-demo/
+- **Job Application Copilot:** https://github.com/yvonnejinn/job-application-copilot
+- **Loan Approval Prediction:** https://github.com/yvonnejinn/loan-approval-decision-analysis
+- **News Intelligence RAG:** https://github.com/yvonnejinn/news-intelligence-rag-agent
 
-GitHub is the source of truth for this project. The original development computer is not required after the repository is pushed.
+## Privacy
 
-On another computer:
-
-```bash
-git clone https://github.com/jiny16pg/Data-Toolkit.git
-cd Data-Toolkit
-git pull
-npm install
-```
-
-After making changes:
-
-```bash
-git add .
-git commit -m "Describe the change"
-git push
-```
-
-Keep personal and public project links in the repository data, and do not add machine-specific paths or local environment files.
-
-## How to Add a New Project
-
-The main file to edit is `src/data/projects.ts`. Add one `Project` object with its name, type, short description, full description, tech stack and public URL. `ProjectLogo.tsx` contains the small custom SVG marks used by the launcher tiles.
-
-For a published demo or documentation page, put its public URL in `src/data/projects.ts`. The interface will open it in a new tab. For an unpublished page, leave the URL empty: the interface will show `Coming Soon` and will not create an invalid `href="#"` link.
-
-## Project Links
-
-- **Competitor Intelligence:** [Fieldnote / Competitive intelligence](https://jiny16pg.github.io/competitor-intelligence-demo/)
-- **BatchLens:** [Data Extraction Pipeline demo](https://jiny16pg.github.io/data-extraction-pipeline-demo/)
-- **Job Application Copilot:** [GitHub repository](https://github.com/yvonnejinn/job-application-copilot)
-- **Loan Approval Prediction:** [GitHub repository](https://github.com/yvonnejinn/loan-approval-decision-analysis)
-- **News Intelligence RAG:** [GitHub repository](https://github.com/yvonnejinn/news-intelligence-rag-agent)
-
-## Before Making This Repository Public
-
-- No private service URLs or hostnames
-- No confidential files or screenshots
-- No API keys, tokens, credentials or passwords
-- No private datasets
-- No proprietary source code
-- No unpublished internal project material
-
-The toolkit should only link to public personal demos, public repositories and public documentation.
+Keep this repository public-safe. Do not add employer-confidential code, internal URLs, private files, credentials, real production data, or machine-specific paths.

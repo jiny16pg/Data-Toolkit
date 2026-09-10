@@ -1,15 +1,18 @@
-export function About() {
+import type { Language } from '../i18n'
+import { uiCopy } from '../i18n'
+
+export function About({ language }: { language: Language }) {
+  const copy = uiCopy[language]
+
   return (
     <section className="about-section" id="about" aria-labelledby="about-heading">
-      <p className="about-label">Why I build</p>
+      <p className="about-label">{copy.aboutLabel}</p>
       <div className="about-copy">
-        <h2 id="about-heading">Most of these started as an annoyance.</h2>
-        <p>
-          A report that was hard to compare, a model that was hard to explain, or a task that kept getting repeated. I like turning those awkward moments into small tools that are easier to use — and easier to trust.
-        </p>
+        <h2 id="about-heading">{copy.aboutTitle}</h2>
+        <p>{copy.aboutBody}</p>
       </div>
       <a className="text-link" href="https://github.com/jiny16pg" target="_blank" rel="noopener noreferrer">
-        More on GitHub ↗
+        {copy.moreOnGithub}
       </a>
     </section>
   )
