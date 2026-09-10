@@ -12,7 +12,7 @@ This repository is a lightweight navigation layer. It does not contain the sourc
 - Loan Approval Prediction
 - News Intelligence RAG
 
-The projects are grouped on the homepage into **AI Products** and **Data & Intelligence**.
+The projects are grouped on the homepage into **Products & Tools** and **Data Science & ML**.
 
 ## Local Development
 
@@ -78,9 +78,7 @@ Keep personal and public project links in the repository data, and do not add ma
 
 ## How to Add a New Project
 
-The main file to edit is `src/data/projects.ts`. Add one `Project` object with its name, group, category, description, icon, tags, actions, status and URLs. The existing `ProjectCard` renders every object, so a new card does not need a copied component.
-
-If a new icon is needed, add its project icon value to `src/types/project.ts` and register the matching Lucide icon in the `iconMap` inside `src/components/ProjectCard.tsx`.
+The main file to edit is `src/data/projects.ts`. Add one `Project` object with its name, group, description, tech stack, actions and URLs. The existing `ProjectCard` renders every object, so a new card does not need a copied component.
 
 For a published demo or documentation page, put its public URL in `src/data/projects.ts`. The interface will open it in a new tab. For an unpublished page, leave the URL empty: the interface will show `Coming Soon` and will not create an invalid `href="#"` link.
 
