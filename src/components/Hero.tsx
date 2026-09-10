@@ -1,9 +1,12 @@
-export function Hero() {
+import type { Language } from '../i18n'
+import { uiCopy } from '../i18n'
+
+export function Hero({ language }: { language: Language }) {
   return (
     <section className="hero-section" id="top" aria-labelledby="hero-title">
       <div className="hero-copy">
         <h1 id="hero-title">Yifan&apos;s Data Toolkit</h1>
-        <p className="hero-lede">A small shelf of products, models and experiments I&apos;ve built to make messy information easier to use.</p>
+        <p className="hero-lede">{uiCopy[language].hero}</p>
       </div>
     </section>
   )
