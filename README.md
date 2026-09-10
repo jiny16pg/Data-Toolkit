@@ -1,4 +1,4 @@
-# Yvonne's AI & Data Toolkit
+# Yifan's Data Toolkit
 
 Personal portfolio and project launcher for selected AI, data science and applied AI projects.
 

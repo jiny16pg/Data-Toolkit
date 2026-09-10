@@ -14,15 +14,10 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <ProjectSection
-          id="projects"
-          title="AI Products"
-          projects={aiProducts}
-        />
-        <ProjectSection
-          title="Data & Intelligence"
-          projects={dataProjects}
-        />
+        <div className="projects-board page-section" id="projects">
+          <ProjectSection title="AI Products" projects={aiProducts} icon="products" />
+          <ProjectSection title="Data & Intelligence" projects={dataProjects} icon="data" />
+        </div>
         <About />
       </main>
       <Footer />

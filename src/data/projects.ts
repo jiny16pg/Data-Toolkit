@@ -15,7 +15,7 @@ export const projects: Project[] = [
     secondaryAction: 'View Project',
     secondaryUrl: 'https://jiny16pg.github.io/competitor-intelligence-demo/',
     featured: true,
-    accent: 'orange',
+    accent: 'blue',
   },
   {
     id: 'batchlens',
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     secondaryAction: 'View Project',
     secondaryUrl: 'https://jiny16pg.github.io/data-extraction-pipeline-demo/',
     featured: true,
-    accent: 'orange',
+    accent: 'blue',
   },
   {
     id: 'job-application-copilot',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     secondaryAction: 'How It Works',
     secondaryUrl: 'https://github.com/yvonnejinn/job-application-copilot',
     featured: true,
-    accent: 'orange',
+    accent: 'blue',
   },
   {
     id: 'loan-approval-prediction',

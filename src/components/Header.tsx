@@ -4,11 +4,14 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a className="brand" href="#top" aria-label="Yvonne's Toolkit home">
+        <a className="brand" href="#top" aria-label="Yifan's Data Toolkit home">
           <span className="brand-mark" aria-hidden="true">
             <LayoutGrid size={16} strokeWidth={2.1} />
           </span>
-          <span>Yvonne&apos;s Toolkit</span>
+          <span className="brand-copy">
+            <strong>Yifan&apos;s Data Toolkit</strong>
+            <small>Applied AI &amp; data projects</small>
+          </span>
         </a>
 
         <nav className="primary-nav" aria-label="Primary navigation">

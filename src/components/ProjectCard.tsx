@@ -1,18 +1,19 @@
 import {
   ArrowUpRight,
   BrainCircuit,
+  BriefcaseBusiness,
   FileSearch,
   Newspaper,
-  Search,
+  ScanSearch,
   Sparkles,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { Project } from '../types/project'
 
 const iconMap: Record<Project['icon'], LucideIcon> = {
-  search: Search,
+  search: ScanSearch,
   'file-search': FileSearch,
-  'wand-sparkles': Sparkles,
+  'wand-sparkles': BriefcaseBusiness,
   'brain-circuit': BrainCircuit,
   newspaper: Newspaper,
 }
@@ -47,7 +48,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className={`project-card ${project.featured ? 'is-featured' : ''}`} data-accent={project.accent}>
       <div className="card-topline">
         <div className="project-icon" aria-hidden="true">
-          <Icon size={21} strokeWidth={1.8} />
+          <Icon size={31} strokeWidth={1.8} />
         </div>
       </div>
       <div className="project-card-content">

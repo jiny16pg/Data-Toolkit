@@ -20,5 +20,5 @@ export interface Project {
   secondaryAction: string
   secondaryUrl: string
   featured: boolean
-  accent: 'neutral' | 'orange'
+  accent: 'neutral' | 'blue'
 }
