@@ -2,16 +2,17 @@ import type { Project } from '../types/project'
 import { ProjectCard } from './ProjectCard'
 
 interface ProjectSectionProps {
-  title: string
   projects: Project[]
 }
 
-export function ProjectSection({ title, projects }: ProjectSectionProps) {
+export function ProjectSection({ projects }: ProjectSectionProps) {
   return (
-    <section className="projects-section" aria-labelledby={`${title}-heading`}>
+    <section className="projects-section" aria-labelledby="projects-heading">
       <div className="section-heading">
-        <h2 id={`${title}-heading`}>{title}</h2>
+        <h2 id="projects-heading">Projects</h2>
+        <span>{String(projects.length).padStart(2, '0')}</span>
       </div>
+
       <div className="project-grid">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />

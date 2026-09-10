@@ -12,7 +12,7 @@ This repository is a lightweight navigation layer. It does not contain the sourc
 - Loan Approval Prediction
 - News Intelligence RAG
 
-The projects are grouped on the homepage into **Products & Tools** and **Data Science & ML**.
+The homepage uses a compact launcher grid so every project is visible at a glance. Hover or focus a tile to reveal its description and technology stack; clicking the tile opens the public demo or repository.
 
 ## Local Development
 
@@ -78,7 +78,7 @@ Keep personal and public project links in the repository data, and do not add ma
 
 ## How to Add a New Project
 
-The main file to edit is `src/data/projects.ts`. Add one `Project` object with its name, group, description, tech stack, actions and URLs. The existing `ProjectCard` renders every object, so a new card does not need a copied component.
+The main file to edit is `src/data/projects.ts`. Add one `Project` object with its name, type, short description, full description, tech stack and public URL. `ProjectLogo.tsx` contains the small custom SVG marks used by the launcher tiles.
 
 For a published demo or documentation page, put its public URL in `src/data/projects.ts`. The interface will open it in a new tab. For an unpublished page, leave the URL empty: the interface will show `Coming Soon` and will not create an invalid `href="#"` link.
 
@@ -87,7 +87,7 @@ For a published demo or documentation page, put its public URL in `src/data/proj
 - **Competitor Intelligence:** [Fieldnote / Competitive intelligence](https://jiny16pg.github.io/competitor-intelligence-demo/)
 - **BatchLens:** [Data Extraction Pipeline demo](https://jiny16pg.github.io/data-extraction-pipeline-demo/)
 - **Job Application Copilot:** [GitHub repository](https://github.com/yvonnejinn/job-application-copilot)
-- **Loan Approval Prediction:** [GitHub repository](https://github.com/yvonnejinn/Loan-Approval-Prediction)
+- **Loan Approval Prediction:** [GitHub repository](https://github.com/yvonnejinn/loan-approval-decision-analysis)
 - **News Intelligence RAG:** [GitHub repository](https://github.com/yvonnejinn/news-intelligence-rag-agent)
 
 ## Before Making This Repository Public
