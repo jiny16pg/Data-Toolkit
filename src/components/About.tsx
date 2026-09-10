@@ -1,20 +1,16 @@
 export function About() {
   return (
-    <section className="about-section page-section" id="about" aria-labelledby="about-heading">
+    <section className="about-section" id="about" aria-labelledby="about-heading">
+      <p className="about-label">Why I build</p>
       <div className="about-copy">
-        <h2 id="about-heading">About</h2>
+        <h2 id="about-heading">Most of these started as an annoyance.</h2>
         <p>
-          A collection of selected projects exploring data science, applied AI, document processing and practical data products.
+          A report that was hard to compare, a model that was hard to explain, or a task that kept getting repeated. I like turning those awkward moments into small tools that are easier to use — and easier to trust.
         </p>
-        <a
-          className="text-link"
-          href="https://github.com/jiny16pg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub ↗
-        </a>
       </div>
+      <a className="text-link" href="https://github.com/jiny16pg" target="_blank" rel="noopener noreferrer">
+        More on GitHub ↗
+      </a>
     </section>
   )
 }
