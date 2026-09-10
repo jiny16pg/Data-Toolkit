@@ -1,22 +1,5 @@
-import {
-  ArrowUpRight,
-  BrainCircuit,
-  BriefcaseBusiness,
-  FileSearch,
-  Newspaper,
-  ScanSearch,
-  Sparkles,
-} from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import type { Project } from '../types/project'
-
-const iconMap: Record<Project['icon'], LucideIcon> = {
-  search: ScanSearch,
-  'file-search': FileSearch,
-  'wand-sparkles': BriefcaseBusiness,
-  'brain-circuit': BrainCircuit,
-  newspaper: Newspaper,
-}
 
 function Action({ label, url, primary }: { label: string; url: string; primary?: boolean }) {
   if (!url) {
@@ -41,27 +24,19 @@ function Action({ label, url, primary }: { label: string; url: string; primary?:
 }
 
 export function ProjectCard({ project }: { project: Project }) {
-  const Icon = iconMap[project.icon]
   const hasDistinctSecondaryAction = Boolean(project.secondaryUrl && project.secondaryUrl !== project.primaryUrl)
 
   return (
-    <article className={`project-card ${project.featured ? 'is-featured' : ''}`} data-accent={project.accent}>
-      <div className="card-topline">
-        <div className="project-icon" aria-hidden="true">
-          <Icon size={31} strokeWidth={1.8} />
-        </div>
-      </div>
+    <article className="project-card">
       <div className="project-card-content">
-        <p className="project-category">{project.category}</p>
-        <h3>{project.name}</h3>
-        <p className="project-description">{project.description}</p>
-        <div className="tag-list" aria-label={`${project.name} tags`}>
-          {project.tags.map((tag) => (
-            <span className="tag" key={tag}>
-              {tag}
-            </span>
-          ))}
+        <div className="project-card-heading">
+          <h3>{project.name}</h3>
+          <span className="project-arrow" aria-hidden="true">↗</span>
         </div>
+        <p className="project-description">{project.description}</p>
+        <p className="project-stack" aria-label={`${project.name} technology stack`}>
+          {project.techStack.join(' · ')}
+        </p>
       </div>
       <div className="project-actions">
         <Action label={project.primaryAction} url={project.primaryUrl} primary />

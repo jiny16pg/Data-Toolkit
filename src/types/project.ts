@@ -1,24 +1,13 @@
-export type ProjectGroup = 'AI Products' | 'Data & Intelligence'
-
-export type ProjectIcon =
-  | 'search'
-  | 'file-search'
-  | 'wand-sparkles'
-  | 'brain-circuit'
-  | 'newspaper'
+export type ProjectGroup = 'Products & Tools' | 'Data Science & ML'
 
 export interface Project {
   id: string
   name: string
   group: ProjectGroup
-  category: string
   description: string
-  icon: ProjectIcon
-  tags: string[]
+  techStack: string[]
   primaryAction: string
   primaryUrl: string
   secondaryAction: string
   secondaryUrl: string
-  featured: boolean
-  accent: 'neutral' | 'blue'
 }
