@@ -12,6 +12,8 @@ export function ProjectCard({ project }: { project: Project }) {
   }
 
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.target !== event.currentTarget) return
+
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault()
       openProject()
