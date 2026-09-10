@@ -8,7 +8,7 @@ interface ProjectSectionProps {
   icon: 'products' | 'data'
 }
 
-export function ProjectSection({ id, title, projects, icon }: ProjectSectionProps) {
+export function ProjectSection({ title, projects, icon }: ProjectSectionProps) {
   const SectionIcon = icon === 'products' ? LayoutGrid : BrainCircuit
 
   return (
